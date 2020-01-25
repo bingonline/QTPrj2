@@ -6,11 +6,22 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.rcParams['font.family']='SimHei'
+matplotlib.rcParams['font.size']=20
 def f(t):
     return np.exp(-t)*np.cos(2*np.pi*t)
 a=np.arange(0.0,5.0,0.02)
 plt.subplot(211)
 plt.plot(a,f(a))
+plt.xlabel('中文')
+plt.title('中文')
+
+
+
 plt.subplot(2,1,2)
+
 plt.plot(a,np.cos(f(a)),'r--')
+
+plt.grid(True)
 plt.show()
